@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <style type="text/css">
+	.main{
+	border:2px solid green;
+	width:80%;
+	TEXT-ALIGN:center;
+	background-color: #000000;
+	color:#ffffff;
+
+}
+.main1{
+	border:2px solid green;
+    width:80%;
+	background-color:#ffffff;
+	
+}
+
+  </style>
+
+  <script type="text/javascript">
+  <!--
+	function valid() 
+	{
+		var rad = false;
+		var buttons = document.forms[0].gender;
+			for (var i = 0; i < buttons.length; i++) {
+				if (buttons[i].checked) {
+					rad = true;
+					break;
+					//alert(buttons[i].value);
+				}
+			}
+
+var x = document.forms[0].list.selectedIndex;
+
+		if(document.forms[0].fname.value==""  ||  document.forms[0].fname.value.length<5)
+		{
+			alert('Please fill proper First Name');
+			document.forms[0].fname.focus();
+			return false;
+		}
+		else if(isNaN(document.forms[0].MBL.value)  ||  document.forms[0].MBL.value.length!=10 )
+		{
+			alert('Please fill Mbile Name with proper 10 digits');
+			document.forms[0].MBL.focus();
+			return false;
+		} 
+		else if (!rad)
+		{
+			alert('Please fill gender');
+			return false;
+						
+		}
+		else if (document.forms[0].lang1.checked==false &&  document.forms[0].lang2.checked==false && document.forms[0].lang3.checked==false)
+		{
+			alert('check box error');
+			return false;
+		}
+		else if (document.forms[0].list[x].value=='none')
+		{
+				alert('please select proper city');
+				return false;
+
+		}
+	
+
+	return true;
+	}
+  //-->
+  </script>
+ </head>
+
+ <body>
+  <div id="" class="main3">
+	<div id="" class="main">
+	FORM</div>
+	<form id='app' method="post" action="test.php" onsubmit='return valid();'>
+		<div id="" class="main1"><br>
+	&nbsp;Fst  Name:<input type="text" name="fname">
+	<hr><br>&nbsp;MOBILE<input type="text" name="MBL">
+	<hr>&nbsp;password:<input type="password" name="pswd"><hr>
+	&nbsp;male <input type="radio" name="gender" value='male' checked>&nbsp;female <input type="radio" name="gender" value='female'><hr>
+	&nbsp;java<input type="checkbox" name="lang1" value='JAVA'>c++<input type="checkbox" name="lang2" value='C'>html<input type="checkbox" name="lang3" value='HTML'><hr>
+	&nbsp;address:<textarea name="address" rows="5" cols="30"></textarea><hr>
+   &nbsp;state:<select name="list">
+		<option value="none" selected>none
+		<option value="MND">mandya
+		<option value="KAR">karnataka
+		<option value="MYS">mysore
+		<option value="TMK">tumkur
+    </select><hr>
+	<center><input type="submit" value="submit">&nbsp;&nbsp;&nbsp;<input type="reset" value="reset"></center>
+  </div>
+	</form>
+  </div>
+ </body>
+</html>

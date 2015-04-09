@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+<script type="text/javascript">
+
+function choices(a, b) {
+
+
+																			
+	switch (b) {
+		
+		case 'SQUARE':
+			statePercentage = 0.5;
+			taxPercentage = 3.5;
+		break;
+		case 'MND' :
+			taxPercentage = 1.0;
+			statePercentage = 1.5;
+		break;
+		case 'BGL' :
+			statePercentage = 2.6;
+			taxPercentage = 4.5;
+		break;
+		case 'TMK' :
+			taxPercentage = 3.0;
+		break;
+		default :
+			taxPercentage = 2.0;
+			statePercentage = 2.3;
+	}
+	alert("tax is " + taxPercentage + " and state is "
+	+ statePercentage);
+	}
+
+	
+</script>
+</head>
+<body onload="choices()">
+<p>Imagine a form with options to pick state code</p>
+</body>
+</html>
